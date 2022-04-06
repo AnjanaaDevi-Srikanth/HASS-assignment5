@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A study of not-so-flawless data charts</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://rawgit.com/almeida-matheus/fullPageScrollPureJS/master/app/assets/stylesheet/full-page-scroll.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style type="text/css">
+      .sectiontype {
+        background-color: white;
+      }
+
+      section div{
+        font-family: "Open Sans";
+        font-style: normal;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      li, ul {
+         margin: 100;
+         /*width: 850px;*/
+         font-size: 1em;
+         text-align: justify;
+         text-align-last: left;
+         font-family: "Open Sans";
+      }
+
+      ul{
+        padding: 25px;
+      }
+
+      p{
+         margin-top: auto;
+         margin-bottom: auto;
+         text-align: justify;
+         text-align-last: left;
+         font-family: "Open Sans";
+         padding: 45px;
+         font-size: 1.5em;
+         }
+
+      img {
+        display: block;
+        float: right;
+        padding: 35px;
+        width: 650px;
+      } 
+
+      span {
+        font-size: 4em;
+        font-style: normal;
+        color: black;
+      }
+
+        /*.button {
+        background-color: #f2cf66;
+        border-bottom: 5px solid #d1b358;
+        text-shadow: 0px -2px #d1b358;
+        padding: 10px 40px;
+        border-radius: 10px;
+        font-size: 25px;
+        color: #fff;
+        text-decoration: none;
+      }*/
+    </style>
+  </head>
+  <body>
+  
+    <div id="main" class="scroll-container">
+      <section class="sectiontype">
+        <div>
+          <span style="text-align: center;"> Improving a Visualization </span> 
+          <h2 style="text-align: center; font-family: Open Sans; padding: 45px; font-size: 1.5em;"><br>Assignment 5 - Anjanaa Devi Srikanth</h2>
+        </div>
+      </section>
+
+      <section class="sectiontype">
+        <p><img src="https://www.aljazeera.com/wp-content/uploads/2022/02/Most-Spoken-Languages-1-1.png?w=770&resize=770%2C770" alt="The World's most spoken languages Source: Al Jazeera"> 
+          <br><br>Al Jazeera designed this chart for World Mother Language Day on 21 February. This chart maps the most widely spoken languages by native and non-native speakers across the world. The languages are grouped and coloured according to the family that the language belongs to. </p>
+        </section>
+
+       <section class="sectiontype">
+        <p><img src="https://www.aljazeera.com/wp-content/uploads/2022/02/Most-Spoken-Languages-1-1.png?w=770&resize=770%2C770" alt="The World's most spoken languages Source: Al Jazeera"> 
+        <br> What is wrong with this chart? 
+          <ul>
+          <li>
+              Idiom Issue: 
+              <ol> 
+                  <li>Why complicate it?
+                    <br>The basic chart is a packed circle chart. The tesselations make it complicated to gauge the area. </li>
+                  <li>Saliency
+                    <br>The bold line demarcating the language families seems unnecessary as they are differentiated by colour anyway. </li>
+                  <li>Why not tree maps?
+                    <br>It seems to me that the idiom has been chosen predominantly because the circular outline symbolises the Earth. </li>
+              </ol>
+          </li> <br>
+          <li>
+              Data issue:
+              <ul>
+                  <li>Selective data points in hierarchy
+                    <br>Egyptian Arabic and Standard Arabic are shown as two different data points, when in fact Egyptian Arabic is a dialect and not a formal language. Given that other languages like English and Hindi also have dialects, it seems that the dialects are selectively added to visualise the language families in a particular way.</li>
+              </ul>
+          </li>
+          </ul>
+          </p>
+      </section>
+
+      <section class="sectiontype">
+        <p> <img src="http://visualizingrights.org/kit/img/circle_packing.png" alt="Circle packing" >
+        Simplify it! 
+        <ol> 
+          <li>Hierarchy Levels
+            <br>The topmost hierarchy represents the language family. The second level of hierarchy denotes the language. Dialects of the language can be introduced in the third level of hierarchy, if the data is available.</li>
+          <li>Smart Use of Colour Channel
+            <br>Each language family can have a colour gradient, so a circle representing a dialect of a language in that family will be the lightest of that colour. It improves the viewer's perception. </li>
+      </ol>
+         </p>
+            </section>
+
+    </div>
+    <script src="https://rawgit.com/almeida-matheus/fullPageScrollPureJS/master/app/assets/javascript/full-page-scroll.js"></script>
+    <script type="text/javascript">
+      new fullScroll({
+        mainElement: "main",
+        //displayDots: true,
+        //dotsPosition: "right",
+        animateTime: 0.7,
+        animateFunction: "ease",
+      });
+    </script>
+  </body>
+</html>
